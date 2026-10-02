@@ -1,0 +1,14 @@
+{
+  "name": "inboxmcp",
+  "description": "InboxMCP plugins for managing LinkedIn inbox, research, and approved outreach from Claude.",
+  "owner": {
+    "name": "InboxMCP",
+    "url": "https://inbox-mcp.com"
+  },
+  "plugins": [
+    {
+      "name": "inboxmcp",
+      "source": "./"
+    }
+  ]
+}
