@@ -1,6 +1,6 @@
 {
   "name": "inboxmcp",
-  "description": "InboxMCP plugins for managing LinkedIn inbox, research, and approved outreach from Claude.",
+  "description": "InboxMCP plugins for managing LinkedIn, WhatsApp, Telegram and Instagram inboxes, LinkedIn research, and approved outreach from Claude.",
   "owner": {
     "name": "InboxMCP",
     "url": "https://inbox-mcp.com"

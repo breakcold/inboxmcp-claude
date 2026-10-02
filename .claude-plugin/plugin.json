@@ -3,7 +3,7 @@
   "name": "inboxmcp",
   "displayName": "InboxMCP for LinkedIn",
   "version": "0.1.0",
-  "description": "Manage your LinkedIn inbox and messages, research LinkedIn profiles, and prepare user-approved LinkedIn outreach with InboxMCP.",
+  "description": "Manage your LinkedIn, WhatsApp, Telegram and Instagram inboxes, research LinkedIn profiles, and prepare user-approved outreach with InboxMCP.",
   "author": {
     "name": "InboxMCP",
     "url": "https://inbox-mcp.com"
@@ -11,7 +11,7 @@
   "homepage": "https://inbox-mcp.com",
   "repository": "https://github.com/breakcold/inboxmcp-claude",
   "license": "MIT",
-  "keywords": ["linkedin", "linkedin inbox", "linkedin messages", "profile research", "linkedin outreach", "connection requests"],
+  "keywords": ["linkedin", "linkedin inbox", "linkedin messages", "profile research", "linkedin outreach", "connection requests", "whatsapp", "telegram", "instagram", "whatsapp messages", "telegram messages", "instagram dms", "unified inbox"],
   "icon": "./assets/logo.png",
   "documentationUrl": "https://inbox-mcp.com/docs",
   "supportUrl": "https://inbox-mcp.com/docs",

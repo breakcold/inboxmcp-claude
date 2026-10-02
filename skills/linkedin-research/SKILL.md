@@ -9,6 +9,8 @@ Read [account access and limits](../../references/account-and-limits.md) before 
 
 Use `linkedin_search_people` with `keywords` or a LinkedIn people-search `url` supplied by the user. A search URL preserves its filters. Use `network_distance` when the user specifies connections or degree. Each page costs a search; request at most 25 results per page and follow `next_cursor` only as needed.
 
+Search and profile lookups use the first LinkedIn account and its network unless `account` names another one. Pass `account` when the user asks about a specific account's network or limits.
+
 Use returned `person_id` values for later calls. Retrieve selected profiles with `linkedin_get_profile`, passing the ID or the public identifier after `linkedin.com/in/` as `person`. A profile lookup counts as a profile view.
 
 When names match more than one person, use employer, role, location, and profile URL to resolve identity before preparing outreach. Keep unresolved matches explicit.
