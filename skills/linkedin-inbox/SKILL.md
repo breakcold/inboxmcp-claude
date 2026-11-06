@@ -19,7 +19,7 @@ Present the person or conversation name, the latest inbound request, its timesta
 
 Draft replies using the conversation's facts and the user's requested tone. Keep commitments, dates, and claims grounded in the conversation or the user's instructions.
 
-Show the recipient and exact text before calling `linkedin_send_message` with `chat_id`, `text`, and the chat's `account`. Send only after the user authorizes that reply. If they already approved that exact draft, proceed without another approval request.
+Show the recipient and exact text before calling `linkedin_send_message` with `chat_id`, `text`, and the chat's `account`. Send only after the user authorizes that reply. If they already approved that exact draft, proceed without another approval request. To send an image with the message (one per message), add `image_url`, a public `https` link to a JPEG, PNG, or WebP image of at most 8 MB, or `media_id` from `upload_image` for an image on the user's device or attached in the chat: give the user the upload link and wait until they say it's uploaded. If you made the image yourself and can run commands with internet access (a code sandbox, a terminal), upload it yourself with the `upload_command` that `upload_image` returns, and pass the `media_id` once it answers `ok`. Show the image with the text before sending.
 
 Confirm success from the tool result. If the outcome is uncertain, inspect the conversation with a fresh read before retrying. Reading or summarizing does not authorize `linkedin_mark_read`; use it when the user asks to mark the conversation read or unread.
 

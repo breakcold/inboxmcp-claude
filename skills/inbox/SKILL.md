@@ -21,7 +21,7 @@ Present the network, the person or group name, the latest inbound request, its t
 
 Draft replies from the conversation's facts and the user's requested tone, in the register of that network: chat apps are usually shorter and less formal than LinkedIn. Keep commitments, dates, and claims grounded in the conversation or the user's instructions.
 
-Show the network, the recipient or group, and the exact text before calling `inbox_send_message` with `chat_id`, `account`, and `text`. Send only after the user authorizes that reply. If they already approved that exact draft, proceed without another approval request. In a group chat, the reply goes to every member: say so when it matters.
+Show the network, the recipient or group, and the exact text before calling `inbox_send_message` with `chat_id`, `account`, and `text`. Send only after the user authorizes that reply. If they already approved that exact draft, proceed without another approval request. In a group chat, the reply goes to every member: say so when it matters. To send an image with the message (one per message), add `image_url`, a public `https` link to a JPEG, PNG, or WebP image of at most 8 MB, or `media_id` from `upload_image` for an image on the user's device or attached in the chat: give the user the upload link and wait until they say it's uploaded. If you made the image yourself and can run commands with internet access (a code sandbox, a terminal), upload it yourself with the `upload_command` that `upload_image` returns, and pass the `media_id` once it answers `ok`. Show the image with the text before sending.
 
 Confirm success from the tool result. If the outcome is uncertain, inspect the conversation with a fresh read before retrying.
 

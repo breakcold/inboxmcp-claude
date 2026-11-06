@@ -1,13 +1,13 @@
 {
-  "name": "inboxmcp",
-  "description": "InboxMCP plugins for managing LinkedIn, WhatsApp, Telegram and Instagram inboxes, LinkedIn research, and approved outreach from Claude.",
+  "name": "pluggzy",
+  "description": "Pluggzy plugin for managing LinkedIn, WhatsApp, Telegram and Instagram messages, scheduling LinkedIn and Instagram posts, LinkedIn research, and approved outreach from Claude.",
   "owner": {
-    "name": "InboxMCP",
-    "url": "https://inbox-mcp.com"
+    "name": "Pluggzy",
+    "url": "https://pluggzy.com"
   },
   "plugins": [
     {
-      "name": "inboxmcp",
+      "name": "pluggzy",
       "source": "./"
     }
   ]

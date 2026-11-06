@@ -1,6 +1,6 @@
 ---
 name: whatsapp-telegram-instagram
-description: Use when the user wants to work on WhatsApp, Telegram, or Instagram specifically - read or reply to chats, message a phone number or user, react to a message, look up a contact's profile, list a group's members, or list or publish Instagram posts. Sends, reactions, and posts require user approval.
+description: Use when the user wants to work on WhatsApp, Telegram, or Instagram specifically - read or reply to chats, message a phone number or user, react to a message, look up a contact's profile, list a group's members, or list, publish, or schedule Instagram posts. Sends, reactions, and posts require user approval.
 ---
 
 # WhatsApp, Telegram and Instagram
@@ -43,4 +43,6 @@ Use `whatsapp_list_group_members` or `telegram_list_group_members` with a group 
 
 `instagram_list_posts` lists the account's own posts by default, or another user's with `user_id`. Report captions, dates, likes, and comments as returned.
 
-`instagram_create_post` publishes a photo to the account's feed. It takes `image_url`, a public `https` link to a JPEG, PNG, or WebP image of at most 8 MB, and an optional caption in `text`. Show the image link, the exact caption, and the account before publishing, and publish only after approval. The post is public and cannot be edited or deleted through this plugin. Report success and the post link only when the tool returns them.
+`instagram_create_post` publishes a photo to the account's feed. It takes the photo as `image_url`, a public `https` link to a JPEG, PNG, or WebP image of at most 8 MB, or as `media_id` from `upload_image` for a photo on the user's device or attached in the chat (give the user the upload link and wait until they say it's uploaded; for a photo you made yourself in a sandbox or terminal with internet access, upload it with the `upload_command` that `upload_image` returns), and an optional caption in `text`. Show the image, the exact caption, and the account before publishing, and publish only after approval. The post is public and cannot be edited or deleted through this plugin. Report success and the post link only when the tool returns them.
+
+`instagram_schedule_post` takes the same `image_url` or `media_id` and `text` plus `publish_at`, an ISO 8601 date and time with a UTC offset, and publishes the photo then. An `image_url` is checked when scheduling and downloaded again at publish time, so use a link that keeps working until then; an uploaded image is kept with the post. Confirm the image, caption, account, and time in the user's time zone before scheduling. Check or cancel it with `list_scheduled_posts` and `cancel_scheduled_post`, as described in [LinkedIn outreach](../linkedin-outreach/SKILL.md).

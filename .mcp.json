@@ -1,8 +1,8 @@
 {
   "mcpServers": {
-    "inboxmcp": {
+    "pluggzy": {
       "type": "http",
-      "url": "https://inbox-mcp.com/mcp"
+      "url": "https://pluggzy.com/mcp"
     }
   }
 }

@@ -1,6 +1,6 @@
 # Account access and limits
 
-Use the host's OAuth connection to InboxMCP. Credentials stay in the browser sign-in flow. Do not request LinkedIn, WhatsApp, Telegram, or Instagram passwords, verification codes, QR codes, cookies, or access tokens in chat.
+Use the host's OAuth connection to Pluggzy. Credentials stay in the browser sign-in flow. Do not request LinkedIn, WhatsApp, Telegram, or Instagram passwords, verification codes, QR codes, cookies, or access tokens in chat.
 
 Discover the connected server's tools before using a workflow. The `whatsapp_*`, `telegram_*`, and `instagram_*` tools are listed only when the connection has such an account, and appear after the host refreshes its tool list. The `inbox_*` tools work with every connected account. If a named tool is unavailable, explain which step cannot run. Do not replace missing tools with guessed API calls.
 
@@ -10,7 +10,7 @@ Call `inbox_list_accounts` to see the connected accounts with their `account_id`
 
 Tools that act on one conversation or person take an optional `account`. Pass the `account_id` when several accounts could match. A listed chat includes its `account_id`: reuse it for that chat's messages, replies, reactions, and read state. If a tool answers `ambiguous` with a list of accounts, ask the user which one to use, or pick the one the conversation came from. Never retry with a guessed account.
 
-Some connections are limited to one account (`limited_to_one`). They cannot use other accounts or accounts connected later. The fix is to reconnect the app to InboxMCP without choosing a single account.
+Some connections are limited to one account (`limited_to_one`). They cannot use other accounts or accounts connected later. The fix is to reconnect the app to Pluggzy without choosing a single account.
 
 ## Status and limits
 
@@ -22,7 +22,7 @@ Respect returned `retry_after_seconds` and next-step guidance. Do not loop throu
 
 When no account of the requested network is connected, use `connect_account` with `provider` (`linkedin`, `whatsapp`, `telegram`, or `instagram`) and `mode: "auto"`. To reconnect a signed-out account, use `mode: "reconnect"`, with `account` when several of that network are connected. `linkedin_connect_account` remains available for LinkedIn. Explain any trial, price, or subscription change reported by the tool before sharing its link. LinkedIn and Instagram open a login page. WhatsApp and Telegram show a QR code to scan from the phone app, and WhatsApp can use a pairing code instead. Links expire after the duration in the result. After the user finishes in their browser, call `inbox_list_accounts` to verify the connection.
 
-When the plan is blocked, use `inboxmcp_billing` if available. Report the returned plan and provide its browser link. Do not infer current pricing or active coverage from plugin copy. Billing changes happen in the browser.
+When the plan is blocked, use `pluggzy_billing` if available. Report the returned plan and provide its browser link. Do not infer current pricing or active coverage from plugin copy. Billing changes happen in the browser.
 
 ## Permissions and data
 
