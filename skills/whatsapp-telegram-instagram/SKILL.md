@@ -17,7 +17,7 @@ Each network has the same chat tools:
 
 `list_chats` merges every account of the network unless `account` is given. Each item carries its `account_id`: pass it as `account` to the other tools for that chat. Follow [Inbox](../inbox/SKILL.md) for triage, reading order, drafting, and reply approval.
 
-Show the recipient or group and the exact text before any send. In a group, a message reaches every member.
+Show the recipient or group and the exact text before any send. In a group, a message reaches every member. For Facebook Messenger and Pages, use [Facebook](../facebook/SKILL.md).
 
 ## Start a conversation
 

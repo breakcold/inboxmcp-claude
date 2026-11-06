@@ -1,6 +1,6 @@
 ---
 name: linkedin-inbox
-description: Use when the user wants to check their LinkedIn inbox specifically, read LinkedIn messages or conversations, find unread LinkedIn messages or replies they owe, and draft responses. Send replies only with user approval. For WhatsApp, Telegram, Instagram, or several networks at once, use the inbox skill. This skill handles LinkedIn messaging, not email inboxes.
+description: Use when the user wants to check their LinkedIn inbox specifically, read LinkedIn messages or conversations, find unread LinkedIn messages or replies they owe, and draft responses. Send replies only with user approval. For WhatsApp, Telegram, Instagram, Facebook, or several networks at once, use the inbox skill. This skill handles LinkedIn messaging, not email inboxes.
 ---
 
 # LinkedIn inbox
